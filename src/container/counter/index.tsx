@@ -1,5 +1,8 @@
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
+
 export function Counter() {
-  const count = 10;
+  const count = useSelector((state: RootState) => state.counter.value);
 
   return (
     <div className="counter">
